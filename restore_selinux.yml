@@ -1,12 +1,9 @@
 ---
 - name: Restore SELinux Policy
   hosts: web
-  
+
   tasks:
-    
     - name: restore SELinux to enforcing
       ansible.posix.selinux:
         policy: targeted
         state: enforcing
-      
-
